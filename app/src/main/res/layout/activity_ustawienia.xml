@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/allOptionsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#494848"
+    android:backgroundTintMode="add"
+    android:textAlignment="center"
+    tools:context=".Ustawienia">
+
+    <TextView
+        android:id="@+id/optionsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/optionsText"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/screenColorOptionsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/screenColorOptionsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/calcColorOptionLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/screenColorLayout2"
+            android:layout_width="163dp"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/screenColorLayout1"
+            app:layout_constraintTop_toBottomOf="@+id/OptionScreenColorText">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/showScreenColorTextLayout"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                app:layout_constraintBottom_toTopOf="@+id/showScreenColorLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/showScreenColorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/showScreenColorText"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/showScreenColorLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/showScreenColorTextLayout">
+
+                <TextView
+                    android:id="@+id/showScreenColor"
+                    style="@style/Widget.AppCompat.TextView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="#FF0000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13999999" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/screenColorLayout1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/screenColorLayout2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/OptionScreenColorText">
+
+            <TextView
+                android:id="@+id/redColorTextScreen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/redColorTextScreen"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/redValueScreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/redSliderScreen"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:max="255"
+                app:layout_constraintBottom_toTopOf="@+id/greenColorTextScreen"
+                app:layout_constraintEnd_toStartOf="@+id/redValueScreen"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/redColorTextScreen" />
+
+            <TextView
+                android:id="@+id/redValueScreen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:textAlignment="textStart"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toTopOf="@+id/greenColorTextScreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/redSliderScreen"
+                app:layout_constraintTop_toBottomOf="@+id/redColorTextScreen" />
+
+            <TextView
+                android:id="@+id/greenColorTextScreen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/greenColorTextScreen"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/greenValueScreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/redValueScreen" />
+
+            <SeekBar
+                android:id="@+id/greenSliderScreen"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:max="255"
+                app:layout_constraintBottom_toTopOf="@+id/blueColorTextScreen"
+                app:layout_constraintEnd_toStartOf="@+id/greenValueScreen"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/greenColorTextScreen" />
+
+            <TextView
+                android:id="@+id/greenValueScreen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toTopOf="@+id/blueColorTextScreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/greenSliderScreen"
+                app:layout_constraintTop_toBottomOf="@+id/greenColorTextScreen" />
+
+            <TextView
+                android:id="@+id/blueColorTextScreen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/blueColorTextScreen"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/blueSliderScreen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.683"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/greenSliderScreen"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <SeekBar
+                android:id="@+id/blueSliderScreen"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:max="255"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/blueValueScreen"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blueColorTextScreen" />
+
+            <TextView
+                android:id="@+id/blueValueScreen"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:textAlignment="textStart"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/blueSliderScreen"
+                app:layout_constraintTop_toBottomOf="@+id/blueColorTextScreen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/OptionScreenColorText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/change_screen_color"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/screenColorLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calcColorOptionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/backToCalcLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screenColorOptionsLayout">
+
+        <TextView
+            android:id="@+id/numberOfDecPlacesText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="@string/numberOfDecPlacText"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/decPlaces"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/decreaseDecPlacesButton"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="120dp"
+            android:backgroundTint="#2C2A2A"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:onClick="changeNumOfDecPlaces"
+            android:padding="0dp"
+            android:tag="-"
+            android:text="@string/decreaseDecPlacesButton"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/decPlaces"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfDecPlacesText"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp" />
+
+        <TextView
+            android:id="@+id/decPlaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/decPlaces"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/increaseDecPlacesButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/decreaseDecPlacesButton"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfDecPlacesText" />
+
+        <Button
+            android:id="@+id/increaseDecPlacesButton"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="120dp"
+            android:backgroundTint="#2C2A2A"
+            android:gravity="center"
+            android:onClick="changeNumOfDecPlaces"
+            android:padding="0dp"
+            android:tag="+"
+            android:text="@string/increaseDecPlacesButton"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/decPlaces"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfDecPlacesText"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backToCalcLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcColorOptionLayout">
+
+        <Button
+            android:id="@+id/backToCalc"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2C2A2A"
+            android:onClick="backToMainActivity"
+            android:text="@string/backToCalc"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
